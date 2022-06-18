@@ -9,7 +9,7 @@ Simple restaurant page designed by myself. Enjoy the illusive [Ironshake](siteur
 - MOBILE FIRST WORKFLOW
 
 ## Mockup Design
-![Iron Shake Mockup](https://github.com/JfuseCodes/Designs/blob/main/iron-shake/design-mockup/mockup-design.pdf)
+<img src="https://github.com/JfuseCodes/Designs/blob/main/iron-shake/design-mockup/mockup-design.pdf">
 
 ## CHALLENGES:
 The main challenge I faced was trying to be more organized and methodical. Also, architectural code proved to be a challenge as well.
@@ -29,7 +29,9 @@ Before I jumped into working on the project, there was a few resources I used, b
 
 ## AUTHOR:
 Twitter - [@JfuseCodes](https://www.twitter.com/JfuseCodes)
+
 Check out my [Blog](https://blog.jfusedesigns.com)
+
 My [Personal Website](https://jfusedesigns.com)
 
 
