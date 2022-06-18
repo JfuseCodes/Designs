@@ -12,7 +12,6 @@ export default function location(){
           textLocationLogo = document.createElement('div'),
           textLocationDescription= document.createElement('div'),
           restaurantImg = new Image(),
-        //   restaurantMobileImg = new Image(),
           locationLogoImg = new Image();
 
     //IMAGE SRC:
@@ -29,27 +28,17 @@ export default function location(){
     textLocationContainer.classList.add('text--location-container', 'ani-loc--slide-in-bottom-1s-wd-1s');
     restaurantImg.classList.add('image--restaurant-img', 'ani-loc--slide-in-right');
     
+    //ANIMATION CLASS ADDITION
+    textHeaderContainer.classList.add('ani-loc--slide-in-bottom-1s-nd');
+    textParagraphContainer.classList.add( 'ani-loc--slide-in-bottom-1s-wd-p5');
+    textLocationContainer.classList.add( 'ani-loc--slide-in-bottom-1s-wd-1s');
+    restaurantImg.classList.add('ani-loc--slide-in-right');
+
 
     //TEXT CONTENT:
     textHeaderContainer.textContent = 'OUR LOCATION';
     textParagraphContainer.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla auctor magna at elit scelerisque, bibendum dignissim orci venenatis. Pellentesque habitant.'
     textLocationDescription.textContent = '282 Kevin Brook, Imogeneborough, CA 58517'
-
-    //IMAGE RENDERING BASED ON SCREEN SIZE:
-    // function displayMobileImage(x){
-    //     if(x.matches){
-    //         restaurantMobileImg.classList.remove('hidden');
-    //         restaurantImg.classList.add('hidden');
-    //     }
-    //     else{
-    //         restaurantMobileImg.classList.add('hidden');
-    //         restaurantImg.classList.remove('hidden');
-    //     }   
-    // }
-
-    // let mobileMax = window.matchMedia("(max-width: 1199px)");
-    // displayMobileImage(mobileMax);
-    // mobileMax.addListener(displayMobileImage);
 
 
     //SECTION APPENDING:

@@ -1,6 +1,6 @@
 # Iron Shake Restaurant
   
-Simple restaurant page designed by myself. Enjoy the illusive [Ironshake](siteurl).
+Simple restaurant page designed by myself. Enjoy the illusive [Ironshake](https://ironshake.netlify.app).
 
 ## TECHNOLOGIES USED:
 - WEBPACK
