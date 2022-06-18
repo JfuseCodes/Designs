@@ -1,0 +1,57 @@
+.content-container{
+    border:2px solid green;
+}
+
+.content--header-container{
+    @include free-for-all($display:flex, $justify-content:center, $align-items:center,$height: 128px);
+    h1{
+        @include free-for-all($font-fam: $robo-dark, $font-weight: 700, $font-size: 46px, );
+    }
+}
+
+.content--sub-header-container{
+    @include free-for-all($display:flex, $justify-content:space-evenly, $align-items:center, $height: 100px);
+    div{
+        h3{
+            @include free-for-all($font-size: 16px, $font-weight: 700,$cursor:pointer);
+        }
+        &:hover{
+            @include free-for-all($font-color: $navbar--link-active);
+        }
+    }
+}
+
+.menu-items--container{
+    @include free-for-all($display:flex, $flex-wrap: wrap, $justify-content:space-evenly,);
+}
+
+.item-container{
+    
+    .card--container{
+
+        @include free-for-all($bg: white, $width: 266px, $height:198px, $display:flex, $flex-direction:column, $justify-content:space-evenly,$position: relative, $bottom: 120px);
+        @include free-for-all($break-point: $desktop, $bottom: 85px);
+        .card--price-container{
+            p{
+                @include free-for-all($font-color: $menu--card-heading-color, $font-size: 32px, $font-weight: 900, $font-fam: $robo-dark );
+            }
+        }
+
+        div:nth-of-type(2n){
+            p{
+                @include free-for-all($font-size:24px, $font-weight: 600);
+            }
+        };
+
+        div:last-of-type{
+            @include free-for-all($width:228px, );
+            p{
+                @include free-for-all($font-size:12px,$font-color: $roboLight, $opacity: 50%);
+            }
+        }
+    }
+}
+
+img{
+    @include free-for-all($width:300px, $height: 447px );
+}

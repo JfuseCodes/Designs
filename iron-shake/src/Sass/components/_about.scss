@@ -1,0 +1,57 @@
+.about--main-container{
+    @include free-for-all-max($break-point: $mobile-max, $min-height:1080px,$display:flex, $justify-content:center);
+    @include free-for-all($break-point: $desktop, $display:flex, $flex-direction:column, $align-items:center);
+}
+
+.header--container{
+    @include free-for-all-max($break-point: $mobile-max, $position:absolute,$top:350px, $display:flex, $flex-direction:column, $align-items:center, $justify-content:center,);
+    @include free-for-all($break-point: $desktop, $display:flex, $justify-content:center, $align-items: center, $height:250px, $width:100%, $position:absolute, $flex-direction: column, $top: 375px);
+    
+    img{
+        @include free-for-all($border-radius: 50%);
+        @include free-for-all-max($break-point: $mobile-max, $width: 150px, $height:150px,);
+        @include free-for-all($break-point: $desktop, $width:150px, $height: 150px,);
+    };
+
+    section:last-of-type{
+        @include free-for-all($break-point: $desktop, $text-align:center);
+        font-size: 52px ;
+        font-family: 'uniqueFont';
+    };
+};
+
+.image--grapes-container{
+    @include free-for-all($z-index:-1);
+    @include free-for-all-max($break-point: $mobile-max,$height:200px,$top:100px, $width:260px,$max-width:500px,$max-height:250px,$position: absolute, $left: 0px);
+    @include free-for-all($break-point: $desktop, $position:absolute, $left:0px, $display:flex, $justify-content:center, $align-items: center);
+    img{
+        @include free-for-all($z-index:1);
+        @include free-for-all-max($break-point: $mobile-max, $width:100%, $max-height:550px);
+    }  
+}
+
+.image--cup-container{
+    @include free-for-all-max($break-point: $mobile-max, $width:100%, $max-width:500px,$max-height:250px,$position: absolute,$top: 455px, $right: 0px);
+    @include free-for-all($break-point: $desktop, $position:absolute, $right:0px, $display:flex, $justify-content:center, $align-items: center);
+    img{
+        @include free-for-all-max($break-point: $mobile-max, $width:100%, $max-height:550px);
+    };
+}
+
+.section__info{
+    @include free-for-all-max($break-point: $mobile-max, $height:427px);
+    @include free-for-all-max($break-point: $mobile-max, $position:relative,$top: 680px, $display:flex, $flex-direction: column, $align-items: center, $justify-content:space-evenly,);
+    @include free-for-all($break-point: $desktop, $position: relative,$top: 600px, $width: 55%, $height: 220px, $display:flex, $flex-direction:column, $justify-content: space-evenly, $align-items:center);
+
+    div{
+
+        @include free-for-all($font-fam: $roboLight,$font-size:20px, $text-align:center);
+        @include free-for-all-max($break-point: $mobile-max,$width:70%);
+    };
+    div:first-of-type{
+        @include free-for-all-max($break-point: $mobile-max, $height: auto,);
+    }
+    div:last-of-type{
+        @include free-for-all($break-point: $desktop, $width:80%,);
+    }
+};

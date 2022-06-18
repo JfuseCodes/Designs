@@ -1,0 +1,27 @@
+.nav-container{
+    @include free-for-all($height:128px, $width:100%, $bg: $home--bg-color, $display:flex, $flex-direction: column, $justify-content:space-evenly);
+    @include free-for-all($break-point:$desktop, $flex-direction: row, $align-items:center, $justify-content:space-evenly);
+    div{
+        @include free-for-all($break-point: $desktop, $width:50%);
+    }
+    div:first-of-type{
+        @include free-for-all($display:flex, $justify-content:center);
+        @include free-for-all($break-point: $desktop, $justify-content: left, $padding: 0 0 0 110px );
+       
+    };
+    div:last-of-type{
+
+        ul{
+            @include free-for-all($display:flex, $justify-content: space-around);
+            @include free-for-all($break-point: $desktop, $padding: 0 110px 0 0);
+            li{
+                @include free-for-all($display:inline,$font-size: 18px);
+                @include free-for-all($break-point: $desktop, $cursor: pointer,);
+            }
+        }
+    };
+};
+
+.display-only{
+    color: $navbar--link-active;
+};

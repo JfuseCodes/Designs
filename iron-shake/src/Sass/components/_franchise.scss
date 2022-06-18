@@ -1,0 +1,104 @@
+.franchise--main-container{
+
+    @include free-for-all($break-point: $desktop, $display:flex, $justify-content:center, $align-items:center, $min-width:1200px );
+}
+.fr-content--container{
+
+    @include free-for-all($bg: white);
+    @include free-for-all-max($break-point: $mobile-max, $min-height: 812px);
+    @include free-for-all($break-point: $desktop, $display: flex, $flex-direction:row, $justify-content:center, $align-items:center, $height:800px, $width:100%);
+
+    .fr-content--text-section{
+
+        @include free-for-all($break-point: $desktop, $width:50%, $min-width:auto, $height: 582px);
+    }
+
+    .fr-content--image-section{
+        @include free-for-all($break-point: $desktop, $width:40%, $min-width: auto);
+    }
+}
+
+.fr-text--heading-container{
+    @include free-for-all($break-point: $desktop, $height: 40%, $width:80%, $position:relative, $left:100px,);
+    @include free-for-all-max($break-point: $mobile-max, $height: 140px, $display:flex, $align-items:center, $justify-content:center);
+    h1{
+        @include free-for-all($font-fam: $robo-dark,$font-weight:700,);
+        @include free-for-all($break-point: $desktop,$font-size:64px,);
+        @include free-for-all-max($break-point: $mobile-max, $font-size:46px);
+    }
+}
+
+.fr-text--body-container{
+    @include free-for-all-max($break-point: $mobile-max, $display:flex,$flex-direction:column, $justify-content:space-evenly, $align-items:center,$position: relative, $top:455px, $min-height:284px );
+    @include free-for-all($break-point: $desktop, $height:50%, $width:80%, $position: relative, $left: 100px, $display:flex, $flex-direction:column, $justify-content:space-around, $align-items: space-evenly );
+    .contact--info-container{
+        
+        @include free-for-all($width: 324px, $border: 1px solid $home--bg-color,$border-radius: 50px,);
+        .contact-container{
+
+            @include free-for-all($width:300px,  $height:57px, $display:flex, $flex-direction:row, $cursor: pointer,$align-items:center, $justify-content:center, $position: relative, $left:5px);
+            .contact--image-container{
+                img{
+                    @include free-for-all($width:32px, $height:32px, $border-radius:50%);
+                }
+            }
+
+            .contact--info-container{
+                border:.1px solid white;
+                p{
+                    @include free-for-all($font-size:20px,);
+                }
+            }
+
+        }
+    }
+}
+
+
+.fr-image-container{
+
+    @include free-for-all-max($break-point: $mobile-max, $position: relative, $display:flex, $justify-content:center, $bottom:275px); 
+    @include free-for-all($break-point: $desktop, $display:grid, $grid-temp-col: repeat(2,1fr), $grid-temp-row: repeat(2,1fr), $grid-col-gap: 15px, $grid-row-gap: 10px);
+
+    .fr-image--div1{
+        @media(min-width: $desktop){
+            grid-area: 1/1/3/2;
+        }
+        img{
+            @include free-for-all-max($break-point: $mobile-max, $width:100%, $max-width: 446px);
+            @include free-for-all($break-point: $desktop,$height:568px, $width: 100%,$min-width:400px);
+
+        }
+    }
+
+    .fr-image--div2{
+        @include free-for-all-max($break-point: $mobile-max, $display:none);
+        @media(min-width: $desktop){
+            grid-area: 1/2/2/3;
+        }
+
+        img{
+            @include free-for-all($break-point: $desktop,$height:280px, $width: 100%, $max-width:263px);
+
+        }
+    }
+    
+    .fr-image--div3{
+
+        @include free-for-all-max($break-point: $mobile-max, $display:none);
+
+        @media(min-width: $desktop){
+            grid-area: 2/2/3/3;
+        }
+        img{
+
+            @include free-for-all($break-point: $desktop,$height:273px, $width: 100%,$max-width: 263px );
+
+        }
+    }
+}
+
+
+
+
+

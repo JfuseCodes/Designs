@@ -1,0 +1,50 @@
+.location--main-container{  
+    @include free-for-all($break-point: $desktop, $display:flex, $height: auto,$justify-content:space-evenly,$align-items:center, $min-height: 768px, );
+}
+
+
+.text--container{
+    @include free-for-all($display:flex, $flex-direction:column);
+    @include free-for-all-max($break-point: $mobile-max, $justify-content:center,  $align-items: center);
+    @include free-for-all($break-point: $desktop, $text-align:left, $width:44%, $height:220px, $justify-content:space-between );
+}
+
+.text--header-container{
+    @include free-for-all($font-fam: $robo-dark, $max-width: 514px,  $font-weight: 900, $font-color: $home--btn-color,);
+    @include free-for-all-max($break-point:$mobile-max, $width: auto, $min-width: 375px, $position: absolute, $top: 175px, $font-size: 46px, $text-align:center);
+    @include free-for-all($break-point: $desktop, $font-size: 64px, $width:33%,$min-width: 465px, $text-align:left);
+}
+
+.text--paragraph-container{
+    @include free-for-all($font-fam: $roboLight, $font-weight:300, $line-height: 24px, $font-size: 18px,);
+    @include free-for-all-max($break-point: $mobile-max,$position: absolute, $top: 745px, $text-align:center, $width:88%,$min-width: 375px, $max-width: 514px,);
+    @include free-for-all($break-point: $desktop,  $width: 44%, $min-width: 574px);
+}
+
+.text--location-container{ 
+    @include free-for-all($display:flex, $align-items: center);
+    @include free-for-all-max($break-point: $mobile-max, $position: absolute, $top: 865px, $min-width: 375px);
+    @include free-for-all($break-point: $desktop,$width:26%, $cursor: pointer);
+
+    div:first-of-type{
+
+        img{
+            @include free-for-all($width: 32px, $height: 32px);          
+        };
+    }
+
+    div:last-of-type{
+        text-decoration: underline;
+        @include free-for-all($font-fam: $robo-dark, $font-weight: 900 );
+        @include free-for-all-max($mobile-max, $font-size: 14px, $width: auto);
+        @include free-for-all($break-point: $desktop, $min-width: 465px);
+    }
+};
+
+.image--container{
+    @include free-for-all-max($break-point: $mobile-max, $position: absolute, $top: 275px, $width:100%, $display: flex, $justify-content:center);
+    img{
+        @include free-for-all-max($break-point: $mobile-max,$width:100%, $min-width: 375px, $max-width:460px);
+        @include free-for-all($break-point: $desktop, $width:500px);
+    };
+}

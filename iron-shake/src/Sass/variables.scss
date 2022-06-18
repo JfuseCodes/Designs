@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+@font-face {
+    font-family: 'uniqueFont';
+    src: url('../fonts/Jacques_Francois_Shadow/JacquesFrancoisShadow-Regular.ttf');
+};
+
+@font-face {
+    font-family: 'mainFont';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'mainFont--bold';
+    src: url('../fonts/Roboto/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'mainFont--light';
+    src:url('../fonts/Roboto/Roboto-Light.ttf');
+};
+
+$home--bg-color: #E5E5E5;
+$home--btn-color: #2D274A;
+$home--btn-txt-color: #DCE3F1;
+$navbar--link-active: #2F07F0;
+$menu--card-heading-color: #524F6A;
+
+$roboMain: 'mainFont';
+$roboLight: 'mainFont--light';
+$robo-dark: 'mainFont--bold';
+
+$mobile:0;
+$desktop:1200px;
+$mobile-max: $desktop - 0.01;
+$mobile-break-point: "$break-point: $mobile-max";
+
+:export {
+    navbar_link: $home--btn-color;
+    navbar_activeLink: $navbar--link-active;
+}

@@ -1,0 +1,18 @@
+@import 'variables';
+@import 'animations';
+@import 'reset';
+@import 'mixins';
+@import './components/navbar';
+@import './components/landing-page';
+@import './components/about';
+@import './components/location';
+@import './components/menu';
+@import './components/franchise';
+
+html{
+    font-family: 'mainFont';
+}
+
+.hidden{
+    display:none;
+}
