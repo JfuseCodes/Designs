@@ -9,7 +9,7 @@ Simple restaurant page designed by myself. Enjoy the illusive [Ironshake](siteur
 - MOBILE FIRST WORKFLOW
 
 ## Mockup Design
-![](https://github.com/JfuseCodes/Designs/blob/main/iron-shake/design-mockup/mockup-design.pdf)
+![Iron Shake Mockup](https://github.com/JfuseCodes/Designs/blob/main/iron-shake/design-mockup/mockup-design.pdf)
 
 ## CHALLENGES:
 The main challenge I faced was trying to be more organized and methodical. Also, architectural code proved to be a challenge as well.
@@ -23,8 +23,9 @@ The main challenge I faced was trying to be more organized and methodical. Also,
 <br>
 - Learning Experience:
   - Although there is so much more for me to learn from Webpack, this project paves the way for someone to understand the usage of a framework like React or other component-based tools. It also gives the developer a much better control and understanding of a project that can keep growing. It will surely benefit someone trying to write maintainable and scalable code.
+  
 ## USEFUL RESOURCES:
-Before I jumped into working on the project, there was a few resources I used, but mainly the [tutorial](https://webpack.js.org/guides/getting-started/) over at the webpack website, to help get the file structure setup.
+Before I jumped into working on the project, there was a few resources I used, but mainly the [tutorial](https://webpack.js.org/guides/getting-started) over at the webpack website, to help get the file structure setup.
 
 ## AUTHOR:
 Twitter - [@JfuseCodes](https://www.twitter.com/JfuseCodes)
