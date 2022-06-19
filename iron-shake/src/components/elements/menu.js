@@ -202,8 +202,8 @@ export default function menu(){
     shakeSmoothiesContent.classList.add('container--smoothies', 'menu-items--container');
     wrapsPitaContent.classList.add('container--wraps-pita', 'menu-items--container')
     saladFruitContent.classList.add('container--salads-fruit', 'menu-items--container')
-    snacksContent.classList.add('container--snacks', 'menu-items--container');
-    snacksContent.classList.add('test-class');
+    snacksContent.classList.add('container--snacks', 'menu-items--container', 'test-class');
+    // snacksContent.classList.add('test-class');
     
     //EVENT LISTENERS
     displaySelectedLinkContent(subHeadingCategories);
