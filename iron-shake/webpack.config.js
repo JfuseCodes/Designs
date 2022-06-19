@@ -7,7 +7,9 @@ module.exports = {
         main: './src/main.js',
         nav: './src/components/elements/navbar.js',
         home: './src/components/elements/home.js',
+        location: './src/components/elements/location.js',
         menu: './src/components/elements/menu.js',
+        franchise: './src/components/elements/franchise.js',
         
     },
     devtool: 'inline-source-map',
