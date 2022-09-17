@@ -575,7 +575,7 @@ const getLocationByName = async (cityName = '', stateCode = '', countryCode = ''
           weatherResponseData = await weatherResponse.json();
           console.log(weatherResponseData); // weather data from here
 
-    const AQIResponse = await fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${locationLat}&lon=${locationLon}&units=${units}&appid=${myAPI_KEY}`);
+    const AQIResponse = await fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${locationLat}&lon=${locationLon}&units=${units}&appid=${myAPI_KEY}`);
     const AQIResponseData = await AQIResponse.json();
           console.log(AQIResponseData);
           renderCards(weatherResponseData, AQIResponseData, locationName);
@@ -595,7 +595,7 @@ const getLocationByZipCode = async(zipCode='', countryCode = '', part='', units 
           updatedWeatherResponseData = await updatedWeatherResponse.json();
           console.log(updatedWeatherResponseData);
 
-    const AQIResponse = await fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${locationLat}&lon=${locationLon}&units=${units}&appid=${myAPI_KEY}`),
+    const AQIResponse = await fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${locationLat}&lon=${locationLon}&units=${units}&appid=${myAPI_KEY}`),
           AQIResponseData = await AQIResponse.json();
           console.log(AQIResponseData);
           renderCards(updatedWeatherResponseData, AQIResponseData, locationName);
