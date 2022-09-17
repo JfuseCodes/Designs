@@ -1,8 +1,7 @@
 // 'use strict';
 let DateTime = luxon.DateTime;
-// const myAPI_KEY = 'a85aa800562806583036443df79565de';
-const myAPI_KEY = config.myAPI_KEY,
-      secretKey = config.SECRET_KEY;
+const myAPI_KEY = 'a85aa800562806583036443df79565de';
+
 
 const html = document.documentElement,
       body = document.body,

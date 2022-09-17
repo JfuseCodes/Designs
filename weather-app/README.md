@@ -1,6 +1,6 @@
 # Weather Dashboard WebApp
 
-Dashboard app that fetches data. Check the [weather]() in your location.
+Dashboard app that fetches data. Check the [weather](https://checkoutside.netlify.app) in your location.
 
 ## Technologies Used
 
@@ -22,7 +22,7 @@ Dashboard app that fetches data. Check the [weather]() in your location.
 
 
 ## Useful Resources
-- To fully understand asynchronous programming in javascript, one must understand callback functions. I used this [youtube](https://www.youtube.com/watch?v=cNjIUSDnb9k&t=661s) video to get passed that roadblock. Simple and very clear to understand 🔥
+- To fully understand asynchronous programming in javascript, one must understand callback functions. I used this youtube [video](https://www.youtube.com/watch?v=cNjIUSDnb9k&t=661s) to get passed that roadblock. Simple and very clear to understand 🔥
 
 ## Author
 Twitter - [@JfuseCodes](https://twitter.com/jfusecodes)
