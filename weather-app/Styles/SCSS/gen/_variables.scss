@@ -1,0 +1,28 @@
+$mobile:0;
+$desktop:1440px;
+$mobile-max: $desktop - 0.01;
+$mobile-break-point: "$break-point: $mobile-max";
+
+$aqi--good: #749e47;
+$aqi--moderate: #f2c14f;
+$aqi--unhealthy: #e58231;
+$aqi--very-unhealthy: #b64433;
+$aqi--hazardous: #7d1d4f;
+$dashboard--bg-color: #F8F8F8;
+$dashboard--gray-stroke: #D9D9D9;
+$mobile-side--bg-color: #DFDFDF;
+$document-white: #FAFAFA;
+$document-orange: #FF8356;
+$document-gray: #878787;
+$document-black: #091540;
+$data-card-blue: #132E4F;
+$data-card-green: #BED64C;
+$mobile-screen-sized--bg-color: #F8F8F8;
+
+
+@font-face {
+    font-family: 'Inter', sans-serif
+    url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+};
+
+$main-font: 'Inter', sans-serif;

@@ -1,0 +1,70 @@
+.card--current-weather{
+
+    @include free-for-all($desktop, $border-radius:30px, $bg: url('../../assets/images/card1-bg.png'), $bg-size: cover, $bg-repeat:no-repeat);
+    .content-container{
+        @include free-for-all($desktop,$padding: 0 25px 0 25px, $display:flex, $flex-direction:column, $height:inherit, $justify-content:space-around );
+        .card-header--container{
+    
+            @include free-for-all($desktop, $display:flex, $justify-content: space-between, $width: 200px);
+
+            .card-header--text-container{
+                
+                @include free-for-all($desktop, $display:flex, $flex-direction: column, $justify-content: space-evenly, );
+                .card-header--heading{
+                    h1{
+                       @include free-for-all($desktop, $font-size: 16px, $font-weight: bold,) 
+                    }
+                }
+            }
+            
+        }
+    
+        .card-body--container{
+
+            .card-body--heading{
+                h1{
+                    @include free-for-all($desktop, $font-size: 48px, $font-weight: bold)
+                }
+            }
+            
+            .card-body--temp-description{
+                p{
+                    @include free-for-all($desktop, $font-size:16px, $font-weight: 400)
+                }
+            }
+            
+        }
+    
+        .card-footer--container{ // row/column container
+            
+            @include free-for-all($desktop, $display:flex, $justify-content:space-between);
+
+            .card-footer--item-container{ //individual item containers
+                @include free-for-all($desktop, $border-radius: 10px, $width:120px, $height: 84px, $display:flex, $flex-direction:column, $justify-content: center, $align-items: center,);
+                
+                .card-footer--content-container{
+                    @include free-for-all($desktop, $height:60px, $width: 78px, $display:flex, $flex-direction:column, $justify-content:space-evenly, $align-items:center,);
+                    .footer-item--description{
+                        p{
+                            @include free-for-all($desktop, $font-weight:bold,)
+                        }
+                    }
+                }&:first-of-type{
+                    @include free-for-all($desktop, $font-color: $document-white,)
+                }
+            }
+
+
+            .card-footer--item1-container{
+                @include free-for-all($desktop, $border:1px solid $data-card-blue, $bg: $data-card-blue,);
+            }
+            .card-footer--item2-container{
+                @include free-for-all($desktop, $border:1px solid $data-card-green, $bg: $data-card-green, $font-color: $document-black);
+            }
+            .card-footer--item3-container{
+                @include free-for-all($desktop, $border: 1px solid $document-white, $bg: $document-white, $font-color: $document-black);
+            }
+        }
+    }
+
+}

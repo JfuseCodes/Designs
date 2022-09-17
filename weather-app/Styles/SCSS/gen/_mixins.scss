@@ -1,0 +1,100 @@
+@mixin free-for-all($break-point:$mobile,$grid-temp-col:null, $grid-temp-row:null, $grid-col-gap:null, $grid-row-gap:null, $grid-area:null,$font-fam:null,$opacity:null, $flex-wrap:null, $align-self: null,$transform:null, $position:null,$inset:null,$top:null, $right:null, $bottom:null, $left:null, $text-align:null,$margin:null,$display:null,$align-content:null, $justify-content: null, $align-items:null, $flex-direction:null, $height:null, $width:null, $min-height:null, $min-width:null, $max-height:null, $max-width:null, $border: null, $border-radius:null,$cursor:null, $font-weight:null, $font-size:null,$line-height:null, $letter-spacing:null, $font-color: null, $bg:null, $bg-size: null, $box-shadow: null, $padding:null, $z-index:null, $bg-repeat:null, $overflow:null ){
+    @for $i from 0 to length($break-point){
+        @media(min-width: #{nth($break-point, $i + 1)}){
+            position: $position;
+            inset: $inset;
+            top:$top;
+            right:$right;
+            bottom: $bottom;
+            left: $left;
+            margin:$margin;
+            display: $display;
+            justify-content: $justify-content;
+            align-content:$align-content;
+            align-items: $align-items;
+            align-self: $align-self;
+            flex-direction: $flex-direction;
+            flex-wrap: $flex-wrap;
+            height: $height;
+            width: $width;
+            min-height: $min-height;
+            min-width: $min-width;
+            max-height: $max-height;
+            max-width:$max-width;
+            border: $border;
+            border-radius: $border-radius;
+            text-align: $text-align;
+            cursor: $cursor;
+            font-weight: $font-weight;
+            font-size: $font-size;
+            font-family: $font-fam;
+            color: $font-color;
+            letter-spacing: $letter-spacing;
+            line-height: $line-height;
+            background: $bg;
+            background-size: $bg-size;
+            background-repeat: $bg-repeat;
+            box-shadow: $box-shadow;
+            padding: $padding;
+            transform: $transform;
+            z-index: $z-index;
+            opacity:$opacity;
+            grid-template-columns: $grid-temp-col;
+            grid-template-rows: $grid-temp-row;
+            grid-area: $grid-area;
+            grid-column-gap: $grid-col-gap;
+            grid-row-gap: $grid-row-gap;
+            overflow: $overflow;
+        };
+    };
+};
+
+
+@mixin free-for-all-max($break-point:$mobile, $z-index:null, $grid-temp-col:null, $grid-temp-row:null, $grid-col-gap:null, $grid-row-gap:null, $grid-area:null, $font-fam:null,$opacity:null, $transform:null, $position:null,$inset:null,$top:null, $right:null, $bottom:null, $left:null,$text-align:null,$margin:null, $margin-top: null, $margin-right:null, $margin-bottom: null, $margin-left: null, $display:null,$align-content:null, $justify-content: null, $align-items:null, $flex-direction:null, $height:null, $width:null, $min-height:null, $min-width:null, $max-height:null, $max-width:null, $border: null, $border-radius:null,$cursor:null, $font-weight:null, $font-size:null,$line-height:null, $letter-spacing:null, $font-color: null, $bg:null, $bg-size: null, $box-shadow: null, $padding:null ){
+    @for $i from 0 to length($break-point){
+        @media(max-width: #{nth($break-point, $i + 1)}){
+            position: $position;
+            inset: $inset;
+            top:$top;
+            right:$right;
+            bottom: $bottom;
+            left: $left;
+            margin:$margin;
+            margin-left: $margin-left;
+            margin-right: $margin-right;
+            margin-top:$margin-top;
+            margin-bottom: $margin-bottom;
+            display: $display;
+            justify-content: $justify-content;
+            align-content:$align-content;
+            align-items: $align-items;
+            flex-direction: $flex-direction;
+            height: $height;
+            width: $width;
+            min-height: $min-height;
+            min-width: $min-width;
+            max-height: $max-height;
+            max-width:$max-width;
+            border: $border;
+            border-radius: $border-radius;
+            text-align: $text-align;
+            cursor: $cursor;
+            font-weight: $font-weight;
+            font-size: $font-size;
+            font-family: $font-fam;
+            color: $font-color;
+            letter-spacing: $letter-spacing;
+            line-height: $line-height;
+            background: $bg;
+            background-size: $bg-size;
+            box-shadow: $box-shadow;
+            padding: $padding;
+            transform: $transform;
+            opacity: $opacity;
+            grid-template-columns: $grid-temp-col;
+            grid-template-rows: $grid-temp-row;
+            grid-area: $grid-area;
+            z-index: $z-index;
+        }
+    }
+}

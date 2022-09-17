@@ -1,0 +1,67 @@
+.card--air-quality{
+    @include free-for-all($desktop, $border-radius:30px, $bg: url('../../assets/images/card2-bg.png'), $bg-size: cover, $bg-repeat:no-repeat, $font-color: $document-white);
+
+    .content-container{
+        @include free-for-all($desktop,$padding: 0 25px 0 25px, $display:flex, $flex-direction:column, $height:inherit, $justify-content:space-around );
+        
+        .card-header--container{
+            @include free-for-all($desktop, $display:flex, $justify-content: space-between, $width: 260px);
+            .card-header--text-container{
+                @include free-for-all($desktop, $display:flex, $flex-direction: column, $justify-content: space-evenly, );
+
+                .card-header--heading{
+                    h1{
+                        @include free-for-all($desktop, $font-size: 16px, $font-weight: bold,) 
+                     }   
+                }
+            }
+
+        }
+
+        .card-body--container{
+            h1{
+                @include free-for-all($desktop, $font-size: 48px, $font-weight: bold)
+            }
+        }
+    }
+}
+
+.aqi-tooltip{
+    @include free-for-all($desktop, $position:absolute,$bottom:-10px, $width:88px, $height:36px, $border-radius: 10px, $bg: $data-card-blue, $z-index:0, $box-shadow: 4px 4px 10px rgba(0,0,0,.1));
+
+    &::after{
+        content: " ";
+        position:absolute;
+        top:100%;
+        left:50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: $data-card-blue transparent transparent transparent;
+    }
+}
+
+
+.aqi-tooltip--standard{
+    @include free-for-all($desktop, $left:145px,);
+}
+
+.aqi-tooltip--hazardous{
+    @include free-for-all($desktop, $right: 0px);
+}
+
+.aqi-text{
+    @include free-for-all($desktop, $position:relative, $top:10px, $font-color: $document-black )
+}
+
+.aqi-text--good{
+    @include free-for-all($desktop, $left:25px,);
+}
+
+.aqi-text--standard{
+    @include free-for-all($desktop, $left:17px)
+}
+
+.aqi-text--hazardous{
+    @include free-for-all($desktop, $right:3px, $padding: 0 2px 0 2px);
+}

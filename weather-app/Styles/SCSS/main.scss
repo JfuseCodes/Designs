@@ -1,0 +1,152 @@
+@import "./gen/variables";
+@import "./gen/mixins";
+@import "./gen/reset";
+@import './components/card--air-quality';
+@import './components/card--current-weather';
+@import './components/weather-today';
+@import './components/searchbar';
+@import './components/sidesection';
+
+html{
+    font-family: $main-font;
+    background-color: $dashboard--bg-color;
+}
+
+.hidden{
+    display:none;
+}
+
+body{
+    
+}
+.main{
+    // height:100vh;
+    // width:20vw;
+    // max-width: 1024px;
+//    @include free-for-all-max($mobile-max,$display:flex, $justify-content:center, $align-items:center);
+@include free-for-all-max($mobile-max, $display:flex, $justify-content:center, );
+// @include free-for-all($desktop, $width:80vw);
+//   @include free-for-all($desktop, $display:grid, $grid-temp-col: repeat(2, 1fr), $grid-temp-row: repeat(2, 1fr), $grid-col-gap: 0px, $grid-row-gap: 0px);
+    // @include free-for-all($desktop, $display:flex, $justify-content:center)
+}
+
+
+
+.dashboard--container{
+    @include free-for-all-max($mobile-max,$display:none);
+    // @include free-for-all($desktop,$position:relative, $bottom:775px, $width:50%, ); 
+    // @include free-for-all($desktop, $grid-area: 2/1/3/2);
+    // height:auto;
+    //desktop positioning
+    // position: relative;
+    // bottom:720px;
+    // border:2px solid blue;
+    // @include free-for-all($desktop, $display:grid, $grid-temp-col: repeat(2,1fr), $grid-temp-row: repeat(2,1fr), $grid-col-gap: 0px, $grid-row-gap: 0px);
+    @include free-for-all($desktop, $display:grid, $grid-temp-col: repeat(2,1fr), $grid-temp-row: repeat(2,1fr), $grid-col-gap: 25px, $grid-row-gap: 0px);
+
+}
+
+.mobile--section{
+    @include free-for-all($position:relative, $top:45px, $bg: $mobile-screen-sized--bg-color);
+    // @include free-for-all($desktop, $grid-area: 1/2/3/3, $width:100%,$max-width:375px, $height:845px, $position:relative, $top:33px, $display:flex, $justify-content:center, $align-items:center, $bg: $dashboard--gray-stroke);
+    // @include free-for-all($desktop, $bg:$dashboard--gray-stroke, $width:100%,$max-width:375px,$height:845px, $display:flex, $justify-content:center, $align-items:center,);
+    @include free-for-all($desktop, $top:-20px, $left:20px,$bg:$dashboard--gray-stroke, $width:100%,$max-width:375px,$height:845px,$display:flex, $justify-content:center, $align-items:center);
+
+    // @include free-for-all($desktop, $bg:$dashboard--gray-stroke, $width:100%,$max-width:375px,$height:845px, $display:flex, $justify-content:center, $align-items:center, $position:relative, $right:800px);
+
+    // @include free-for-all($desktop, $grid-area: 1/2/3/3, $width:390px, $height:845px, $position:relative, $top:33px, $display:flex, $justify-content:center, $align-items:center, $bg: $dashboard--gray-stroke);
+}
+
+.container--dashboard__side{
+    @include free-for-all($desktop, $display:flex, $flex-direction:row-reverse,$justify-content:center,$position:relative, $top:20px, $height:auto, $width:100vw,);
+}
+
+
+.card--container{
+    // border:2px solid red;
+    width:475px;
+    height: 400px;
+}
+
+.card--current-weather{
+
+    @include free-for-all($desktop, $grid-area: 1/ 1/2/2);
+
+}
+
+
+
+.card-body--toggle-unit{
+    // border:2px solid green;
+}
+
+.card--air-quality{
+    @include free-for-all($desktop, $grid-area: 1/2/2/3);
+}
+
+// container for skill bars
+.aqi-progress__container{
+    background-color: white;
+    border:2px solid white;
+    border-radius: 10px;
+    height:64px;
+    padding:20px;
+    width: 90%;
+//   height: 2.5em;
+
+};
+
+.aqi-text__container{
+    // border:2px solid black;
+    // width:95%;
+    // padding-bottom:20px;
+    position:relative;
+    z-index:1;
+    top:-10px;
+    display:flex;
+
+    justify-content: space-between;
+    
+}
+
+.aqi-progress__bar{
+    background: #ffff;
+    width: 100%;
+    height: 40%;
+    border-color: #000;
+    border-style: solid;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+    top:20px;
+}
+
+.aqi-progress__background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, $aqi--good, $aqi--moderate, $aqi--unhealthy, $aqi--very-unhealthy, $aqi--hazardous,);
+};
+
+.the-card{
+    border:2px solid black;
+    height:200px;
+    width: 540px;
+    background-color: steelblue;
+    display:flex;
+
+    flex-direction: column;
+}
+
+
+.tool-tip__content-container{
+    position:relative;
+}
+
+
+.weather-today__container{
+    @include free-for-all($desktop,$display:flex, $justify-content:center, $width:100%, $grid-area: 2/1/3/3);
+};
+

@@ -1,0 +1,172 @@
+.side__container{
+    @include free-for-all($width:100vw, $max-width:700px, );
+    @include free-for-all($desktop,$width:320px, $height:775px, $display:flex, $flex-direction:column, $justify-content:center,  $overflow:scroll);
+}
+
+.side__header--container{
+    @include free-for-all($display:flex, $justify-content: space-between);
+}
+
+.side__header--date-location--container{
+    
+    .side__header--date--container{
+        text-align: center;
+        padding: 0 0 4px 0;
+
+        p{
+            @include free-for-all($font-weight: bold, $font-size: 16px);
+        }
+    }
+
+    .side__header--location--container{
+        padding: 4px 0 0 0;
+        p{
+            @include free-for-all($font-size: 12px, $font-weight: 400);
+        }
+    }
+}
+
+.side__header__degree--container{
+    @include free-for-all($display:flex, $font-color: $document-orange, $font-size: 48px, $font-weight: bold,);
+
+    p,span{
+        @include free-for-all($position: relative, $bottom: 7px);
+    }
+};
+
+.side--body-sun__container{
+    @include free-for-all($display:flex, $justify-content: center, $flex-direction: column);
+
+    .side__body--sun-image--container{
+        @include free-for-all($display:flex, $justify-content:center);
+    }
+}
+
+.side__body--sunset-sundown--container{
+    @include free-for-all($display:flex, $flex-direction: column, $font-size: 14px, $padding: 10px 10px 0 10px);
+}
+
+.side__sunset-sundown--heading,
+.side__sunset-sundown--time
+{
+    display:flex;
+    justify-content:space-between;
+}
+
+.side__sunset-sundown--heading{
+    font-weight:bold;
+}
+
+.side__sunset-sundown--time{
+    padding: 10px 0 40px 0;
+};
+
+.side--body-card__container{
+    @include free-for-all($border: 2px solid $data-card-blue, $border-radius:10px, $bg: $data-card-blue, $font-color: $document-white, $display: flex, $justify-content: center, $align-items: center, $padding:10px);
+    
+    .side--body-uvi-card__container{
+        @include free-for-all($display:flex, $justify-content:space-around, $width:100%);
+
+
+        .uvi-card__logo--container{     
+            display:flex;
+        }
+
+        .uvi-card__description--container{
+            
+            @include free-for-all($display:flex, $flex-direction:column, $justify-content: space-evenly, $height: 75px);
+            
+            .uvi-card__description--heading__container{
+               
+                @include free-for-all($display:flex, $justify-content:space-between, $align-items: center, $width: 196px);
+                
+                div:first-of-type{
+                    @include free-for-all($font-size: 32px, $font-weight: bold);
+                }
+
+                div:last-of-type{
+                    @include free-for-all($border:1px solid $data-card-green, $border-radius:10px, $bg: $data-card-green, $font-color: $data-card-blue,$width: auto, $min-width:60px, $height:22px,$display:flex, $justify-content:center, $align-items: center,$font-weight:600, $font-size:12px);        
+                }
+            }
+        }
+    }
+}
+
+.side--footer-prediction__container{
+    .prediction-card__weather-logo__container{
+        @include free-for-all($display:flex, $justify-content:center, $align-items: center, $width: 75px);
+        img{
+            @include free-for-all($width: 48px, $height: 48px);
+        }
+    }
+    .side--footer--section__heading{
+        @include free-for-all($display:flex, $justify-content:center, $align-items:center, $font-size: 30px, $height:100px);
+    }
+
+    .side--footer--prediction-cards__container{
+        @include free-for-all($height: 240px, $display:flex, $flex-direction:column,$justify-content:space-between, $align-items:center, );
+
+        .prediction-card__container{
+            @include free-for-all($bg: $document-white, $width:295px, $height:72px, $display:flex,$border:2px solid $document-white, $border-radius:10px,$box-shadow: 2px 4px 10px rgba(0,0,0,.1));
+            
+            div:first-of-type{
+                display:flex;
+            }
+
+            div:last-of-type{
+
+            }
+        }
+    }    
+}
+
+.prediction-card__weather-description__container{
+    @include free-for-all($display:flex, $flex-direction: column, $justify-content:space-evenly, $width:60%);
+    .prediction-card__weather-date__container{
+
+        p{
+            @include free-for-all($font-color: $document-gray, $font-size: 14px);
+        }
+    }
+
+    .prediction-card__weather-description-para__container{
+        @include free-for-all($display:flex, $justify-content:space-between,$font-size: 16px);
+        .prediction-card__clouds__container{
+            font-weight:bold;
+        }
+
+        .prediction-card__degrees__container{
+            @include free-for-all($width:auto, $min-width: 62px, $font-color: $document-orange);
+        }
+    }
+}
+
+.prediction-button__parent{
+// width:92%;
+
+@include free-for-all($display:flex, $justify-content:flex-end, $min-width: 300px,$width:43%);
+@include free-for-all($desktop, $width:92%)
+
+}
+
+.prediction-button__container{
+    @include free-for-all($display:flex, $justify-content:center,$align-items:center,$border:2px solid $document-orange, $border-radius:8px, $height:48px,$width:147px, $bg: $document-orange, $font-color: $document-white, $box-shadow: 2px 4px 10px rgba(0,0,0,.2),);
+    @include free-for-all($desktop, $cursor:pointer);
+}
+
+.prediction-button__content-container{
+
+    @include free-for-all($display:flex, $justify-content:space-between, $align-items:center, $width:114px, $height:20px);
+    .prediction-button__logo-container{
+        img{
+
+        }
+    }
+
+    .prediction-button__text-container{
+        p{
+
+        }
+    }
+}
+
