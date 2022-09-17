@@ -151,7 +151,9 @@
 
 .prediction-button__container{
     @include free-for-all($display:flex, $justify-content:center,$align-items:center,$border:2px solid $document-orange, $border-radius:8px, $height:48px,$width:147px, $bg: $document-orange, $font-color: $document-white, $box-shadow: 2px 4px 10px rgba(0,0,0,.2),);
+    @include free-for-all-max($padding: 0 0 20px 0);
     @include free-for-all($desktop, $cursor:pointer);
+
 }
 
 .prediction-button__content-container{
