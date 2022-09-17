@@ -561,7 +561,7 @@ const getUnits = element => {
 const saveSearchValue = () => searchInput.value;
 
 const getLocationByName = async (cityName = '', stateCode = '', countryCode = '',part = '', units = '') => {
-    const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName},${stateCode},${countryCode}&appid=${myAPI_KEY}`),
+    const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName},${stateCode},${countryCode}&appid=${myAPI_KEY}`),
           [responseData] = await response.json(),
           locationLat = responseData.lat,
           locationLon = responseData.lon,
