@@ -1,6 +1,6 @@
 .side__container{
-    @include free-for-all($width:100vw, $max-width:700px, );
-    @include free-for-all($desktop,$width:320px, $height:775px, $display:flex, $flex-direction:column, $justify-content:center,  $overflow:scroll);
+    @include free-for-all($width:90vw, $max-width:700px,);
+    @include free-for-all($desktop,$width:320px, $height:845px, $display:flex, $flex-direction:column, $justify-content:center,  $overflow:scroll,);
 }
 
 .side__header--container{
@@ -112,10 +112,6 @@
             div:first-of-type{
                 display:flex;
             }
-
-            div:last-of-type{
-
-            }
         }
     }    
 }
@@ -130,7 +126,7 @@
     }
 
     .prediction-card__weather-description-para__container{
-        @include free-for-all($display:flex, $justify-content:space-between,$font-size: 16px);
+        @include free-for-all($display:flex, $justify-content:space-between,$font-size: 14px);
         .prediction-card__clouds__container{
             font-weight:bold;
         }
@@ -142,8 +138,6 @@
 }
 
 .prediction-button__parent{
-// width:92%;
-
 @include free-for-all($display:flex, $justify-content:flex-end, $min-width: 300px,$width:43%);
 @include free-for-all($desktop, $width:92%)
 
@@ -159,16 +153,8 @@
 .prediction-button__content-container{
 
     @include free-for-all($display:flex, $justify-content:space-between, $align-items:center, $width:114px, $height:20px);
-    .prediction-button__logo-container{
-        img{
+    .prediction__text-container {
 
-        }
-    }
-
-    .prediction-button__text-container{
-        p{
-
-        }
     }
 }
 

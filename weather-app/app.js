@@ -93,18 +93,44 @@ getDate = () => {
           day = now.day,
           year = now.year,
           text = `${weekDay}, ${month} ${day} ${year}`;
+        
     return text;    
 }
 
 getDates = (day2Fetch = "" ) => {
-    const now = DateTime.now();
+    //calculate days in month
+    console.log(DateTime.now())
+    let now = DateTime.now(),
     weekDay = now.weekdayShort,
     month = now.monthShort,
-    day = now.day;
-    if(day2Fetch) day = day + day2Fetch;
+    year = now.year,
+    day = now.day,
+    currentMonth_INT = now.c.month,
+    currentMonth_STRING = now.monthShort,
+    nextMonth_INT = currentMonth_INT < 12 ? currentMonth_INT + 1 : 1,
+    nextMonth_STRING = DateTime.local(year,nextMonth_INT).monthShort;
+    
+    //calculate days in month
+    const daysInCurrentMonth = DateTime.local(year, currentMonth_INT).daysInMonth;
+    
+    if(day2Fetch) {
+        
+        day = day + day2Fetch;
+        // console.log(`day2Fetch: ${day2Fetch} day:${day} day2: ${now.day}`);
+        let daysLeftInMonth = daysInCurrentMonth - now.day;
+        if(daysLeftInMonth <= 7) {
+
+            console.log(day2Fetch, 'this is the day 2 fetch');
+            if(day > daysInCurrentMonth) {
+                month = nextMonth_STRING;
+                day = day - daysInCurrentMonth;
+            }
+        }
+
+    }
     if(day < 10) day = `0${day}`;
-    let year = now.year,
-    text = `${month} ${day}`;
+
+    let text = `${month} ${day}`;
     return text;
 };
 
@@ -181,14 +207,16 @@ const getArrowButton = async element => {
     })
 }
 
-const toggleNextFive = (firstTwoCards,text,list) => {
+const toggleNextFive = async (firstTwoCards,text,list,) => {
     for(let i = 0; i < list.length; i++){
         let result = list[i].classList.toggle('hidden');
+        let btn = document.querySelector('.prediction-button__parent');
         if(!result){
-            console.log('not result'); // everythin not hidden
+            console.log('not result'); // everythin not hidden 
+            btn.style.padding = `0 0 20px 0`
+            btn.style.fontSize = '15px'
             text.textContent = `Show 2 days`;
             list[i].style.padding = `10px 0 10px 0`;
-            
         }
         else{
             console.log('is result'); // everythin hidden
@@ -528,10 +556,8 @@ const renderCards = function(dataOne = "", dataTwo = "", location = '') {
     sideSection_Mobile.innerHTML = side;
 }
 
-//input types
 searchInput.type = 'text';
 buttonInput.type = 'button';
-//input placeholder
 
 searchInput.placeholder = 'Search city, state or zipcode';
 

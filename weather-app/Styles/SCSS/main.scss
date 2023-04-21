@@ -50,7 +50,7 @@ body{
     @include free-for-all($position:relative, $top:45px, $bg: $mobile-screen-sized--bg-color);
     // @include free-for-all($desktop, $grid-area: 1/2/3/3, $width:100%,$max-width:375px, $height:845px, $position:relative, $top:33px, $display:flex, $justify-content:center, $align-items:center, $bg: $dashboard--gray-stroke);
     // @include free-for-all($desktop, $bg:$dashboard--gray-stroke, $width:100%,$max-width:375px,$height:845px, $display:flex, $justify-content:center, $align-items:center,);
-    @include free-for-all($desktop, $top:-20px, $left:20px,$bg:$dashboard--gray-stroke, $width:100%,$max-width:375px,$height:845px,$display:flex, $justify-content:center, $align-items:center);
+    @include free-for-all($desktop, $top:-20px, $left:20px,$bg:$dashboard--gray-stroke, $width:100%,$max-width:375px,$height:845px,$display:flex, $justify-content:center, $align-items:center, $border-radius:4px, $box-shadow: 2px 4px 5px rgba(0,0,0,.1));
 
     // @include free-for-all($desktop, $bg:$dashboard--gray-stroke, $width:100%,$max-width:375px,$height:845px, $display:flex, $justify-content:center, $align-items:center, $position:relative, $right:800px);
 
